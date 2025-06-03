@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>KOD DO ZADANIA 47</h1>
+		<textarea style="width: 98%; height: 300px;">
+ <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie47</title>
+</head>
+<body>
+    <h2>Sprawdzanie boków trójkąta</h2>
+    <button onclick="wpisz()">Wpisz boki trójkąta</button>
+    <p id="wynik"></p>
+
+    <script>
+        function wpisz() {
+            var a_zie, b_zie, c_zie;
+            do {
+                a_zie = parseFloat(prompt("Podaj bok a:"));
+                b_zie = parseFloat(prompt("Podaj bok b:"));
+                c_zie = parseFloat(prompt("Podaj bok c:"));
+            } while (
+                isNaN(a_zie) || isNaN(b_zie) || isNaN(c_zie) ||
+                a_zie <= 0 || b_zie <= 0 || c_zie <= 0 ||
+                (a_zie + b_zie <= c_zie) || (a_zie + c_zie <= b_zie) || (b_zie + c_zie <= a_zie)
+            );
+
+            document.getElementById("wynik").innerText =
+                "Boki tworzą poprawny trójkąt: a=" + a_zie + ", b=" + b_zie + ", c=" + c_zie;
+        }
+    </script>
+</body>
+</html>
+
+		</textarea>
+	</body>
+</html>	

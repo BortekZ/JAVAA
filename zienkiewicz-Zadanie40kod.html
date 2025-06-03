@@ -1,0 +1,142 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>KOD DO ZADANIA 40</h1>
+		<textarea style="width: 98%; height: 300px;">
+            <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Zadanie 40</title>
+    <meta charset="utf-8">
+    <style>
+        h1 {
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Proste działania - Bartosz Zienkiewicz 3F</h1>
+
+    <label for="a">Podaj pierwszą liczbę:</label>
+    <input type="number" id="a">
+    <br><br>
+
+    <label for="b">Podaj drugą liczbę:</label>
+    <input type="number" id="b">
+    <br><br>
+
+    <input type="button" value="DODAWANIE" onclick="suma_zie()">
+    <input type="button" value="ODEJMOWANIE" onclick="roznica_zie()">
+    <input type="button" value="MNOŻENIE" onclick="iloczyn_zie()">
+    <input type="button" value="DZIELENIE" onclick="iloraz_zie()">
+    <input type="button" value="TEORIA-Zienkiewicz" onclick="teoria_zie()">
+
+    <div id="wynik" style="margin-top: 20px;"></div>
+
+    <script>
+        function suma_zie() {
+            let a = document.getElementById("a").value;
+            let b = document.getElementById("b").value;
+
+            if (a === "" || b === "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                a = parseFloat(a);
+                b = parseFloat(b);
+                const suma = a + b;
+                document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + suma.toFixed(2);
+            }
+        }
+        function roznica_zie() {
+            let a = document.getElementById("a").value;
+            let b = document.getElementById("b").value;
+
+            if (a === "" || b === "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                a = parseFloat(a);
+                b = parseFloat(b);
+                const roznica = a - b;
+                document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + roznica.toFixed(2);
+            }
+        }
+        function iloczyn_zie() {
+            let a = document.getElementById("a").value;
+            let b = document.getElementById("b").value;
+
+            if (a === "" || b === "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                a = parseFloat(a);
+                b = parseFloat(b);
+                const iloczyn = a * b;
+                document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloczyn.toFixed(2);
+            }
+        }
+        function iloraz_zie() {
+            let a = document.getElementById("a").value;
+            let b = document.getElementById("b").value;
+
+            if (a === "" || b === "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                a = parseFloat(a);
+                b = parseFloat(b);
+
+                if (b === 0) {
+                    document.getElementById("wynik").innerHTML = "Nie wolno dzielić przez zero.";
+                } else {
+                    const iloraz = a / b;
+                    document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloraz.toFixed(2);
+                }
+            }
+        }
+        function teoria_zie() {
+            document.write(`
+                <p style="color: green; font-size: 16px;">
+                    1. Podaj pierwszą liczbę: <input type="number" id="a">
+                </p>
+                <p style="color: green; font-size: 16px;">
+                    Wytłumaczenie: Tworzy pole do wprowadzania pierwszej liczby.
+                </p>
+
+                <p style="color: green; font-size: 16px;">
+                    <button onclick="suma_zie()">DODAWANIE</button>
+                </p>
+                <p style="color: green; font-size: 16px;">
+                    Wytłumaczenie: Przycisk uruchamiający dodawanie.
+                </p>
+
+                <p style="color: green; font-size: 16px;">
+                    let a = document.getElementById("a").value;
+                </p>
+                <p style="color: green; font-size: 16px;">
+                    Wytłumaczenie: Pobiera wartość z pola 'a'.
+                </p>
+
+                <p style="color: green; font-size: 16px;">
+                    if (a === "")
+                </p>
+                <p style="color: green; font-size: 16px;">
+                    Wytłumaczenie: Sprawdza, czy pole jest puste.
+                </p>
+
+                <p style="color: green; font-size: 16px;">
+                    document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + suma;
+                </p>
+                <p style="color: green; font-size: 16px;">
+                    Wytłumaczenie: Wyświetla wynik działania.
+                </p>
+
+                <div id="wynik" style="color: green; font-size: 16px;"></div>
+            `);
+        }
+    </script>
+</body>
+</html>
+		</textarea>
+	</body>
+</html>	

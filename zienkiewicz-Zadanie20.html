@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 20 Zienkiewicz</title>
+    <script>
+        function obliczDlugosc(x1, y1, x2, y2) {
+            return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2)).toFixed(2);
+        }
+        
+        function Dlugosci() {
+            let xa = parseFloat(document.getElementById('xa_zie').value) || 0;
+            let ya = parseFloat(document.getElementById('ya_zie').value) || 0;
+            let xb = parseFloat(document.getElementById('xb_zie').value) || 0;
+            let yb = parseFloat(document.getElementById('yb_zie').value) || 0;
+            let xc = parseFloat(document.getElementById('xc_zie').value) || 0;
+            let yc = parseFloat(document.getElementById('yc_zie').value) || 0;
+            
+            document.getElementById('dlugoscAB').innerText = `Długość AB: ${obliczDlugosc(xa, ya, xb, yb)} cm`;
+            document.getElementById('dlugoscBC').innerText = `Długość BC: ${obliczDlugosc(xb, yb, xc, yc)} cm`;
+            document.getElementById('dlugoscAC').innerText = `Długość AC: ${obliczDlugosc(xa, ya, xc, yc)} cm`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Oblicz długości boków trójkąta</h1>
+    <label>xa: <input type="number" id="xa_zie" placeholder="xa"> cm</label><br>
+    <label>ya: <input type="number" id="ya_zie" placeholder="ya"> cm</label><br>
+    <label>xb: <input type="number" id="xb_zie" placeholder="xb"> cm</label><br>
+    <label>yb: <input type="number" id="yb_zie" placeholder="yb"> cm</label><br>
+    <label>xc: <input type="number" id="xc_zie" placeholder="xc"> cm</label><br>
+    <label>yc: <input type="number" id="yc_zie" placeholder="yc"> cm</label><br>
+    <button onclick="Dlugosci();">Oblicz długości boków</button><br><br>
+    <div id="dlugoscAB"></div>
+    <div id="dlugoscBC"></div>
+    <div id="dlugoscAC"></div>
+</body>
+</html>
